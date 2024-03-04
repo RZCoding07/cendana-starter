@@ -967,19 +967,19 @@
 					<center>
 						<div class="pure-u-1 body">
 							<div class="slider slick-initialized slick-slider">
-								<div aria-live="polite" class="slick-list draggable">
+								<div aria-live="polite" class="slick-list draggable ">
 									<div class="row px-4 px-lg-1" role="listbox"
-										style="opacity: 1; width: 1317px; transform: translate3d(0px, 0px, 0px); display: flex; margin-bottom: 40px;margin-left: 0.2rem;">
-										<div class="item slick-slide col-4 col-lg-3 slick-current ml-lg-0 slick-active"
+										style="opacity: 1; width: 100dvw; transform: translate3d(0px, 0px, 0px); display: flex; margin-bottom: 40px;margin-left: 0.2rem;">
+										<div class="item slick-slide col-12 col-md-6 col-lg-3 slick-current ml-lg-0 slick-active"
 											data-slick-index="0" aria-hidden="false" tabindex="-1" role="option"
 											aria-describedby="slick-slide00">
-											<div class="wrapper style-1">
+											<div class="wrapper style-1 h-100">
 												<h3 style="font-size: 40; font-weight: 700;color: #fff;">Burn Oil</h3>
 												<div class="line light yellow" style="margin-top: 20px;"></div>
 												<h3 class="user-name">Panas, Terbakar, Konsumsi, Minyak, Bakar</h3>
 											</div>
 										</div>
-										<div class="item slick-slide col-5 col-lg-3 slick-active" data-slick-index="1"
+										<div class="item slick-slide col-12 col-md-6 col-lg-3 slick-active" data-slick-index="1"
 											aria-hidden="false" tabindex="-1" role="option"
 											aria-describedby="slick-slide01">
 											<div class="wrapper style-2">
@@ -991,17 +991,17 @@
 												</h3>
 											</div>
 										</div>
-										<div class="item slick-slide col-5 h-100 col-lg-3 slick-active"
+										<div class="item slick-slide col-12 col-md-6 h-100 col-lg-3 slick-active"
 											data-slick-index="2" aria-hidden="false" tabindex="-1" role="option"
 											aria-describedby="slick-slide02">
-											<div style="padding-bottom: 1cqh" class="wrapper style-3 d-lg-none">
+											<div class="wrapper style-3 bias d-lg-none">
 
 												<h3 style="font-size: 40; font-weight: 700;color: #fff;">Relaxing Music
 												</h3>
 												<div class="line light yellow" style="margin-top: 20px;"></div>
 												<h3 class="user-name">Alunan, Damai, Musik, Santai, Relaksasi</h3>
 											</div>
-											<div  class="wrapper style-3 d-lg-block d-none">
+											<div class="wrapper style-3 bias d-lg-block d-none">
 
 												<h3 style="font-size: 40; font-weight: 700;color: #fff;">Relaxing Music
 												</h3>
@@ -1009,10 +1009,10 @@
 												<h3 class="user-name">Alunan, Damai, Musik, Santai, Relaksasi</h3>
 											</div>
 										</div>
-										<div class="item slick-slide col-4 col-lg-3 slick-active" data-slick-index="2"
+										<div class="item slick-slide col-12 col-md-6 col-lg-3 slick-active" data-slick-index="2"
 											aria-hidden="false" tabindex="-1" role="option"
 											aria-describedby="slick-slide02">
-											<div class="wrapper style" style="background-color: #afafaf;">
+											<div id="last" class="wrapper style" style="background-color: #afafaf;">
 												<h3 style="font-size: 40; font-weight: 700;color: #fff;">Lulur</h3>
 												<div class="line light yellow" style="margin-top: 20px;"></div>
 												<h3 class="user-name">Perawatan, Tubuh, Kecantikan, Pelembap, Relaksasi
@@ -1181,7 +1181,26 @@
 	<script src="./s3-ap-southeast-1.amazonaws.com/cdn.go-jek.com/dist/scripts/moment.js"></script>
 	<script src="./s3-ap-southeast-1.amazonaws.com/cdn.go-jek.com/dist/scripts/moment-id.js"></script>
 	<script src="./s3-ap-southeast-1.amazonaws.com/cdn.go-jek.com/dist/scripts/main.js"></script>
-
+<script>
+	window.onresize = function() {
+	    let h = 0;
+	    $('.bias').each(function() {
+	        if ($(this).is(':visible')) {
+	            h = $(this).height();
+	        }
+	    });
+	    $('#last').height(h);
+	};
+	window.onload = () => {
+let h =0
+ $('.bias').each(function () {
+	if ($(this).is(':visible')) {
+		h=($(this).height());
+	}
+});
+		$('#last').height(h);
+	}
+</script>
 </body>
 
 </html>
